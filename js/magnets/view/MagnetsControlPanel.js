@@ -31,7 +31,7 @@ class MagnetsControlPanel extends Panel {
       // Panel options
       xMargin: 10,
       yMargin: 10,
-      stroke: 'orange',
+      stroke: 'purple',
       lineWidth: 3
     }, options );
 
@@ -43,12 +43,14 @@ class MagnetsControlPanel extends Panel {
       } )
     } );
 
+    debugger;
+
     // 'Flip Polarity' button
     const flipPolarityButton = new RectangularPushButton( {
       content: new Text( exampleSimStrings.flipPolarity, {
         font: new PhetFont( 16 )
       } ),
-      baseColor: 'yellow',
+      baseColor: 'black',
       xMargin: 10,
       listener: () => {
         const orientation = model.barMagnet.orientationProperty.get() + Math.PI;
@@ -62,7 +64,8 @@ class MagnetsControlPanel extends Panel {
       spacing: 10,
       children: [
         magnetControlsTitleNode,
-        flipPolarityButton
+        flipPolarityButton,
+        new Text( 'Im Here' )
       ]
     } );
 
